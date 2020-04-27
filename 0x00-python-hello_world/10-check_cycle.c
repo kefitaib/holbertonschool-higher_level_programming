@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 	if (!list || !(list->next))
 		return (0);
 
-	while (tmp->next && tmp)
+	while (tmp && tmp->next)
 	{
 		tmp = tmp->next->next;
 		l = l->next;
