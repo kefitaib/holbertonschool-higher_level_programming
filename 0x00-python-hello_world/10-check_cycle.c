@@ -8,11 +8,13 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *l = list, *tmp = list;
+	listint_t *l, *tmp;
 
 	if (!list || !(list->next))
 		return (0);
 
+	tmp = list;
+	l = list;
 	while (tmp)
 	{
 		tmp = tmp->next->next;
