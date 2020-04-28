@@ -47,7 +47,7 @@
     You are not allowed to import any module
 
 
-    + Item A
+    `+ Item A
     + Item B
       + Item B 1
       + Item B 2
@@ -56,7 +56,7 @@
     + Item C
       * Item C 1
       * Item C 2
-      * Item C 3'
+      * Item C 3`
 
 
 `<pre>` 
