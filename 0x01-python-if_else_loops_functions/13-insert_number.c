@@ -35,9 +35,9 @@ listint_t *insert_node(listint_t **head, int number)
 			l = l->next;
 		}
 
-		if (!l->next && l->n <= number)
+		if (l->next == NULL && l->n <= number)
 			l->next = tmp;
-		else if (!l->next && l->n > number)
+		else if (l->next == NULL && l->n > number)
 		{
 			tmp = l;
 			*head = tmp;
