@@ -15,13 +15,13 @@
     - Complete the source code in order to print the last digit of the number stored in the variable number.
     - The variable number will store a different value every time you will run this program
     - The output of the program should be:
-        + The string Last digit of, followed by
-	+ the number, followed by
-	+ the string is, followed by the last digit of number, followed by
-	  * if the last digit is greater than 5: the string and is greater than 5
-	  * if the last digit is 0: the string and is 0
-	  * if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
-	+ followed by a new line
+          + The string Last digit of, followed by
+	  + the number, followed by
+	  + the string is, followed by the last digit of number, followed by
+	    * if the last digit is greater than 5: the string and is greater than 5
+	    * if the last digit is 0: the string and is 0
+	    * if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
+	  + followed by a new line
 
 
 ### 2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
