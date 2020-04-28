@@ -1,9 +1,9 @@
 ### 0. Positive anything is better than negative nothing mandatory
     This program will assign a random signed number to the variable number eachtime it is executed. 
-    + Complete the source code in order to print whether the number stored in the variable number is positive or negative.
-    + You can find the source code here.
-    + The variable number will store a different value every time you will run this program
-    + The output of the program should be:
+    - Complete the source code in order to print whether the number stored in the variable number is positive or negative.
+    - You can find the source code here.
+    - The variable number will store a different value every time you will run this program
+    - The output of the program should be:
       	  + The number, followed by
     	  + if the number is greater than 0: is positive
     	  + if the number is 0: is zero
@@ -12,51 +12,38 @@
 
 ### 1. The last digit
     This program will assign a random signed number to the variable number each time it is executed. 
-    Complete the source code in order to print the last digit of the number stored in the variable number.
-    The variable number will store a different value every time you will run this program
-    The output of the program should be:
-    	The string Last digit of, followed by
-	the number, followed by
-	the string is, followed by the last digit of number, followed by
-	    if the last digit is greater than 5: the string and is greater than 5
-	    if the last digit is 0: the string and is 0
-	    if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
-	followed by a new line
+    - Complete the source code in order to print the last digit of the number stored in the variable number.
+    - The variable number will store a different value every time you will run this program
+    - The output of the program should be:
+    	+ The string Last digit of, followed by
+	+ the number, followed by
+	+ the string is, followed by the last digit of number, followed by
+	    * if the last digit is greater than 5: the string and is greater than 5
+	    * if the last digit is 0: the string and is 0
+	    * if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
+	+ followed by a new line
 
 
 ### 2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
     Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
-    	  You can only use one print function with string format
-	  You can only use one loop in your code
-	  You are not allowed to store characters in a variable
-	  You are not allowed to import any module
+    	  - You can only use one print function with string format
+	  - You can only use one loop in your code
+	  - You are not allowed to store characters in a variable
+	  - You are not allowed to import any module
 
 ### 3. When I was having that alphabet soup, I never thought that it would pay off 
     Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
-    	  Print all the letters except q and e
-	  You can only use one print function with string format
-	  You can only use one loop in your code
-	  You are not allowed to store characters in a variable
-	  You are not allowed to import any module
+    	  - Print all the letters except q and e
+	  - You can only use one print function with string format
+	  - You can only use one loop in your code
+	  - You are not allowed to store characters in a variable
+	  - You are not allowed to import any module
 
 ### 4. Hexadecimal printing
     Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
-    You can only use one print function with string format
-    You can only use one loop in your code
-    You are not allowed to store numbers or strings in a variable
-    You are not allowed to import any module
+    	  - You can only use one print function with string format
+    	  - You can only use one loop in your code
+    	  - You are not allowed to store numbers or strings in a variable
+    	  - You are not allowed to import any module
 
 
-`+ Item A`
-`+ Item B
-  + Item B 1
-  + Item B 2
-  + Item B 3`
-
-    + Item C
-      * Item C 1
-      * Item C 2
-      * Item C 3
-
-
-`<pre>` 
