@@ -10,7 +10,6 @@
  * Return: the inserted node.
  */
 
-
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *tmp, *l = *head, *l2;
@@ -36,8 +35,13 @@ listint_t *insert_node(listint_t **head, int number)
 			l = l->next;
 		}
 
-		if (!l->next)
+		if (!l->next && l->n <= number)
 			l->next = tmp;
+		else if (!l->next && l->n > number)
+		{
+			tmp = l;
+			*head = tmp;
+		}
 		else
 		{
 			l2->next = tmp;
