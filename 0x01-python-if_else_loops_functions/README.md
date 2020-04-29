@@ -155,3 +155,5 @@ Write the Python function def magic_calculation(a, b, c): that does exactly the 
             	  43 LOAD_FAST				2 (c)
               	  46 BINARY_SUBTRACT
              	  47 RETURN_VALUE
+
+		  File: 102-magic_calculation.py
