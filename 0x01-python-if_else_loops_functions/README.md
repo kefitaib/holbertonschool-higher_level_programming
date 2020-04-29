@@ -130,10 +130,10 @@
 #### 102. ByteCode -> Python #2
 Write the Python function def magic_calculation(a, b, c): that does exactly the same as the following Python bytecode:
 
-		3				0 LOAD_FAST								0 (a)
-							3 LOAD_FAST							 1 (b)
-						6 COMPARE_OP						  0 (<)
-						9 POP_JUMP_IF_FALSE				16
+      3	  	 	  0 LOAD_FAST				0 (a)
+			  3 LOAD_FAST				1 (b)
+			  6 COMPARE_OP				0 (<)
+			  9 POP_JUMP_IF_FALSE		       16
 
 
 			      4		      12 LOAD_FAST                     	2 (c)
