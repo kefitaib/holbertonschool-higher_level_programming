@@ -142,7 +142,7 @@ Write the Python function def magic_calculation(a, b, c): that does exactly the 
       5       >>      16 LOAD_FAST                	2 (c)
           	          19 LOAD_FAST				1 (b)
 		          22 COMPARE_OP                     	4 (>)
-                          25 POP_JUMP_IF_FALSE                 36
+                      25 POP_JUMP_IF_FALSE                 36
 
       6          	      28 LOAD_FAST                      0 (a)
                     	      31 LOAD_FAST                      1 (b)
