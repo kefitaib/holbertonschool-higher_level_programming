@@ -151,7 +151,7 @@ Write the Python function def magic_calculation(a, b, c): that does exactly the 
 
       7       >>      36 LOAD_FAST				0 (a)
                   	  39 LOAD_FAST                		1 (b)
-             		42 BINARY_MULTIPLY
-            	 	43 LOAD_FAST				2 (c)
-             		46 BINARY_SUBTRACT
-             		47 RETURN_VALUE
+             	42 BINARY_MULTIPLY
+            	43 LOAD_FAST				2 (c)
+             	46 BINARY_SUBTRACT
+             	47 RETURN_VALUE
