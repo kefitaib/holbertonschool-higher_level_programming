@@ -136,8 +136,8 @@ Write the Python function def magic_calculation(a, b, c): that does exactly the 
 			  9 POP_JUMP_IF_FALSE		       16
 
 
-			      4		      12 LOAD_FAST                     	2 (c)
- 		              15 RETURN_VALUE
+      4		      	  12 LOAD_FAST				2 (c)
+ 		          15 RETURN_VALUE
 
 5        >>         16 LOAD_FAST                	2 (c)
           	   19 LOAD_FAST                      1 (b)
