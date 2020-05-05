@@ -14,7 +14,7 @@ void print_python_list_info(PyObject *p)
 
 	len = PyList_Size(p);
 	printf("[*] Size of the Python List = %lu\n", len);
-	printf("[*] Allocated = \n");
+	printf("[*] Allocated = %lu\n", Py_TYPE(p)->tp_itemsize);
 
 	if (len > 0)
 		for (i = 0; i < len; i++)
