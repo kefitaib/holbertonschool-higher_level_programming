@@ -19,7 +19,6 @@ int is_palindrome(listint_t **head)
 	for (; tmp; len++)
 		tmp = tmp->next;
 
-	x = len;
 	tmp = *head;
 	while (i < len / 2)
 	{
