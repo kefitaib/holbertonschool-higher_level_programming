@@ -26,8 +26,7 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 		i++;
 	}
-	x += tmp->n;
-	if (len % 2 == 0)
+	if (len % 2 != 0)
 		tmp = tmp->next;
 
 	while (tmp)
