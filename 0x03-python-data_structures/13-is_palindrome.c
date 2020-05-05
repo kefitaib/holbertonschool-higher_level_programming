@@ -32,9 +32,11 @@ int is_palindrome(listint_t **head)
 	while (tmp)
 	{
 		y += tmp->n;
+		if (!tmp->next)
+			l = tmp;
 		tmp = tmp->next;
 	}
-	if (x == y)
+	if (x == y && l->n == (*head)->n)
 		return (1);
 
 	return (0);
