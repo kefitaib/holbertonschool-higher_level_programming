@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "lists.h"
 
-
 /**
  * is_palindrome - prints all elements of a listint_t list
  * @head: pointer to head of list
@@ -11,8 +10,8 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *l = *head, *tmp = *head;
-	int len = 0, x = 0, i;
+	listint_t *tmp = *head, *l;
+	int len = 0, i = 0, x = 0, y = 0;
 
 	if (!tmp || !tmp->next)
 		return (1);
@@ -20,28 +19,25 @@ int is_palindrome(listint_t **head)
 	for (; tmp; len++)
 		tmp = tmp->next;
 
-	x = len / 2;
-	if (len % 2 == 0)
-		x--;
-	for (i = 0; i <= x; i++)
-		l = l->next;
-
-	if (len % 2 != 0)
-		x--;
-	if (x % 2 != 0)
-		x--;
-
-	while (x > 0)
+	tmp = *head;
+	while (i < len / 2)
 	{
-		tmp = *head;
-		for (i = 0; i < x; i++)
-			tmp = tmp->next;
-
-		if (l->n != tmp->n)
-			return (0);
-		x--;
-		l = l->next;
+		x += tmp->n;
+		tmp = tmp->next;
+		i++;
 	}
+	if (len % 2 != 0)
+		tmp = tmp->next;
 
-	return (1);
+	while (tmp)
+	{
+		y += tmp->n;
+		if (!tmp->next)
+			l = tmp;
+		tmp = tmp->next;
+	}
+	if (x == y && l->n == (*head)->n)
+		return (1);
+
+	return (0);
 }
