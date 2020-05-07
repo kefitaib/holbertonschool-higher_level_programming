@@ -1,10 +1,3 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    l = []
-    for x in my_list:
-        if x == search:
-            y = replace
-        else:
-            y = x
-        l.append(y)
-    return l
+    return list(map(lambda x: x if (x != search) else replace, my_list))
