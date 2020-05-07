@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
         for i in reversed(range(len(new))):
             if i >= 1 and new[i] > new[i - 1]:
                 res -= new[i - 1] * 2
-                res += new[i]
+            res += new[i]
         return res
 
     return 0
