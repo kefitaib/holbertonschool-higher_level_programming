@@ -5,11 +5,14 @@ def safe_print_division(a, b):
         return x
 
     except ZeroDivisionError:
-        x = 0
+        b = False
+
+    else:
+        b = True
 
     finally:
         print("Inside result: ", end="")
-        if x == 0:
+        if not b:
             print("None")
         else:
-            print("{}".format(x))
+            print("{}".format(a / b))
