@@ -20,4 +20,6 @@ class Square:
             self.__size = size
 
     def area(self):
+        """ retune the area of the sqaure
+        """
         return self.__size * self.__size
