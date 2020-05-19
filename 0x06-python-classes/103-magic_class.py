@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+"""MagicClass"""
 import math
 
 
 class MagicClass:
-    def __init__(self, radius):
+    """MagicClass"""
+    def __init__(self, radius=0):
         if type(radius) is not int or not float:
             raise TypeError("radius must be a number")
         else:
