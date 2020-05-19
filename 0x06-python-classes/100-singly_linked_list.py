@@ -68,6 +68,9 @@ class SinglyLinkedList:
     def __str__(self):
         tmp = self.__head
         s = ""
+        if not tmp:
+            return s
+
         while tmp:
             s += str(tmp.data)
             if tmp.next_node:
