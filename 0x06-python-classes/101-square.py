@@ -78,7 +78,7 @@ class Square:
 
         s = ""
         if self.__size == 0:
-            return "\n"
+            return s
 
         else:
             for i in range(self.__position[1]):
@@ -90,6 +90,7 @@ class Square:
                         s += " "
                     else:
                         s += "#"
-                s += "\n"
+                if i < self.__size - 1:
+                    s += "\n"
 
         return s
