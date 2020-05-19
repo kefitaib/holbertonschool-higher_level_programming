@@ -18,7 +18,6 @@ class Square:
         else:
             self.__position = position
 
-
     def area(self):
         """ retune the area of the sqaure
         """
