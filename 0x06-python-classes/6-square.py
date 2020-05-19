@@ -37,9 +37,10 @@ class Square:
             print()
 
         else:
-            x = 1
-            if self.__position[1] <= 0:
-                x = self.__position[0]
+            for i in range(self.__position[1]):
+                print()
+
+            x = self.__position[0]
 
             for i in range(self.__size):
                 for j in range(self.__size + x):
