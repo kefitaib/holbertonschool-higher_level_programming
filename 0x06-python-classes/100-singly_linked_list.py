@@ -4,7 +4,7 @@
 
 class Node:
     """ class Node that defines a node of a singly linked list """
-    def __init__(self, data=0, next_node=None):
+    def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
 
@@ -41,7 +41,7 @@ class Node:
 class SinglyLinkedList:
     """defines a singly linked list"""
     def __init__(self):
-        self.__head = Node()
+        self.__head = None
 
     def sorted_insert(self, value):
         new = Node(value)
