@@ -1,0 +1,19 @@
+The ``0-add_integer`` module
+======================
+
+import the function add:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+negative number:
+	>>> add_integer(3, -1)
+	2
+
+no b value:
+	>>> add_integer(2)
+	100
+
+invalide type:
+	 ...
+	 ...
+	 TypeError: a must be an integer

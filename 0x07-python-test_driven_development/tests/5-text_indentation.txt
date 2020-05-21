@@ -1,0 +1,53 @@
+The ``5-text_indentation.py`` module
+======================
+
+import the function:
+
+       >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+valide case:
+
+       >>> text_indentation("aaa.bbb:ccc?")
+       aaa.
+       <BLANKLINE>
+       bbb:
+       <BLANKLINE>
+       ccc?
+       <BLANKLINE>
+
+space at the start:
+
+      >>> text_indentation("   aaa.bbb:ccc?")
+      aaa.
+      <BLANKLINE>
+      bbb:
+      <BLANKLINE>
+      ccc?
+      <BLANKLINE>
+
+space at the end:
+
+      >>> text_indentation("aaa.bbb:ccc?    ")
+      aaa.
+      <BLANKLINE>
+      bbb:
+      <BLANKLINE>
+      ccc?
+      <BLANKLINE>
+
+space in between:
+
+      >>> text_indentation("aaa.  bbb:  ccc?")
+      aaa.
+      <BLANKLINE>
+      bbb:
+      <BLANKLINE>
+      ccc?
+      <BLANKLINE>
+
+invalide type:
+
+	 >>> text_indentation(10)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text must be a string

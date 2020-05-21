@@ -1,0 +1,50 @@
+The ``2-matrix_divided`` module
+======================
+
+import the function matrix_divided:
+
+        >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+valid case:
+
+        >>> matrix_divided([[2, 4], [6, 8]], 2)
+        [[1.0, 2.0], [3.0, 4.0]]
+
+empty list:
+      >>> matrix_divided([[]], 2)
+      [[]]
+
+invalid type:
+
+	>>> matrix_divided("hi", 2)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+invalid type "list contain a string":
+
+	>>> matrix_divided([["Yes", 4], [6, 8]], 2)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+invalid type - string:
+
+	>>> matrix_divided("Hi", 2)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+invalid size list:
+
+	>>> matrix_divided([[2, 4], [6, 8, 4]], 2)
+	Traceback (most recent call last):
+	...
+	TypeError: Each row of the matrix must have the same size
+
+invalid div:
+
+	>>> matrix_divided([[2, 4], [6, 8]], 0)
+	Traceback (most recent call last):
+	...
+   	ZeroDivisionError: division by zero
