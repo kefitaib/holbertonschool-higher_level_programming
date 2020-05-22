@@ -18,3 +18,7 @@ invalide type:
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: a must be an integer
+
+cast:
+	 >>> add_integer(2.9, 2.8)
+	 4
