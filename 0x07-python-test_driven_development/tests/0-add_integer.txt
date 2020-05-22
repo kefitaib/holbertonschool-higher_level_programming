@@ -14,6 +14,7 @@ no b value:
 	100
 
 invalide type:
+	 >>> add_integer("hi")
 	 ...
 	 ...
 	 TypeError: a must be an integer
