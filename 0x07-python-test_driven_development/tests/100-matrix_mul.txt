@@ -19,6 +19,7 @@ valide case:
        >>> matrix_mul([[1, 2], [3, 4]], [[True, 2], [3, 4]])
        [[7, 10], [15, 22]]
 
+
 invalid type:
 
        >>> matrix_mul([[1, 2]], "Hi")
