@@ -84,12 +84,12 @@ test mul:
 
 Missing arguments:
 
-	>>> lazy_matrix_mul()
+	>>> matrix_mul()
 	Traceback (most recent call last):
 	...
 	TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
 
-	>>> lazy_matrix_mul([3])
+	>>> matrix_mul([3])
 	Traceback (most recent call last):
 	...
 	TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
