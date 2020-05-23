@@ -25,6 +25,7 @@ class Testmaxlist(unittest.TestCase):
         self.assertAlmostEqual(max_integer([16, 2, 3, 4]), 16)
         self.assertAlmostEqual(max_integer([]), None)
         self.assertAlmostEqual(max_integer([-3, -8, -20]), -3)
+        self.assertAlmostEqual(max_integer([-3]), -3)
 
     def test_Type(self):
         """
