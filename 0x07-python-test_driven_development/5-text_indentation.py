@@ -36,3 +36,5 @@ def text_indentation(text):
             print()
             s = ""
             x = 0
+    print(s)
+    print()
