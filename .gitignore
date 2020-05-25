@@ -4,6 +4,7 @@
 *.s
 Betty
 *-main.c
+*-main.py
 _putchar.c
 yo
 *.o
