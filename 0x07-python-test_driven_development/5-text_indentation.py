@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
-Module - text_indentation
-"""
 
+Module - text_indentation
+
+"""
 
 
 def text_indentation(text):
@@ -35,3 +36,5 @@ def text_indentation(text):
             print()
             s = ""
             x = 0
+    if s:
+        print(s, end="")

@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+
+Module - matrix mul
+
+"""
+
+
 def matrix_mul(m_a, m_b):
     """
     multiplies 2 matrices

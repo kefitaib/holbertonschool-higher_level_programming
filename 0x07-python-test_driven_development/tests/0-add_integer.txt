@@ -14,6 +14,23 @@ no b value:
 	100
 
 invalide type:
-	 ...
+	 >>> add_integer("hi")
+	 Traceback (most recent call last):
 	 ...
 	 TypeError: a must be an integer
+
+cast:
+	 >>> add_integer(2.9, 2.8)
+	 4
+
+NaN:
+	 >>> add_integer(float('nan'))
+	 Traceback (most recent call last):
+	 ...
+    	 ValueError: cannot convert float NaN to integer
+
+Max float:
+	>>> add_integer(float('Inf'))
+	Traceback (most recent call last):
+    	...
+	OverflowError: cannot convert float infinity to integer
