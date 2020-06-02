@@ -1,0 +1,37 @@
+The ``1-my_list`` module
+======================
+
+import the class:
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> m = MyList()
+
+valide case:
+
+       >>> m.print_sorted()
+       []
+       >>> print(m)
+       []
+
+       >>> m.append(4)
+       >>> print(m)
+       [4]
+
+       >>> m.append(6)
+       >>> m.append(-1)
+       >>> m.append(10)
+       >>> m.append(-54)
+       >>> print(m)
+       [4, 6, -1, 10, -54]
+       >>> m.print_sorted()
+       [-54, -1, 4, 6, 10]
+
+       >>> m.append("hi")
+       >>> print(m)
+       [4, 6, -1, 10, -54, 'hi']
+
+
+       >>> m.print_sorted()
+       Traceback (most recent call last):
+       ...
+       TypeError: unorderable types: str() < int()
