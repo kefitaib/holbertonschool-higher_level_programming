@@ -14,7 +14,7 @@ try:
     list = l("add_item.json")
 
 except Exception:
-    print('[]')
+    pass
 
 list += sys.argv[1:]
 s(list, "add_item.json")
