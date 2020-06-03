@@ -14,12 +14,12 @@ class Student():
 
     def to_json(self, attrs=None):
 
-        if attrs:
-            d = {}
-            for i in attrs:
-                if hasattr(self, i):
-                    d[i] = self.__dict__[i]
+        if attrs is None:
+            return self.__dict__
 
-            return d
+        d = {}
+        for i in attrs:
+            if hasattr(self, i):
+                d[i] = self.__dict__[i]
 
-        return self.__dict__
+        return d
