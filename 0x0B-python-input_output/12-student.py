@@ -15,12 +15,11 @@ class Student():
     def to_json(self, attrs=None):
 
         if attrs:
-            if any(isinstance(i, str) for i in attrs):
-                d = {}
-                for i in attrs:
-                    if hasattr(self, i):
-                        d[i] = self.__dict__[i]
+            d = {}
+            for i in attrs:
+                if hasattr(self, i):
+                    d[i] = self.__dict__[i]
 
-                return d
+            return d
 
         return self.__dict__
