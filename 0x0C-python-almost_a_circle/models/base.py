@@ -133,6 +133,7 @@ class Base():
     def draw(list_rectangles, list_squares):
         """ draw """
 
+        turtle.pensize(3)
         for x in list_rectangles:
             turtle.forward(x.height)
             turtle.left(90)
@@ -143,6 +144,7 @@ class Base():
             turtle.forward(x.width)
             turtle.left(90)
 
+        turtle.pensize(2)
         for x in list_squares:
             turtle.forward(x.height)
             turtle.left(90)
