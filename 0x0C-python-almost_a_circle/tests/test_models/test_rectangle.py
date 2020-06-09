@@ -15,7 +15,7 @@ class TestBade(unittest.TestCase):
     def test_Init(self):
         """ test value  """
 
-        self.assertAlmostEqual(issubclass(r, b), True)
+        self.assertTrue(issubclass(r, b))
 
         r1 = r(6, 2)
         self.assertAlmostEqual(r1.x, 0)
@@ -174,3 +174,12 @@ class TestBade(unittest.TestCase):
         r1.update(x=1, height=2, y=3, width=4)
         s = "[Rectangle] (89) 1/3 - 4/2"
         self.assertAlmostEqual(print(r1), print(s))
+
+    def test_dict(self):
+        """ test """
+
+        r1 = r(10, 2, 1, 9)
+        r1_d = r1.to_dictionary()
+        s = "{'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10} "
+        self.assertAlmostEqual(len(str(r1_d)), len(s))
+        self.assertAlmostEqual(str(type(r1_d)), "<class 'dict'>")

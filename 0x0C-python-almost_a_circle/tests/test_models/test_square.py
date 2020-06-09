@@ -15,7 +15,7 @@ class TestSquare(unittest.TestCase):
     def test_Init(self):
         """ test value  """
 
-        self.assertAlmostEqual(issubclass(s, r), True)
+        self.assertTrue(issubclass(s, r))
 
         s1 = s(6)
         self.assertAlmostEqual(s1.x, 0)
@@ -168,3 +168,12 @@ class TestSquare(unittest.TestCase):
         s1.update(size=7, id=89, y=1)
         m = "[Square] (89) 12/1 - 7"
         self.assertAlmostEqual(print(s1), print(m))
+
+    def test_dict(self):
+        """ test """
+
+        s1 = s(10, 2, 1)
+        s1_d = s1.to_dictionary()
+        m = "{'id': 1, 'x': 2, 'size': 10, 'y': 1} "
+        self.assertAlmostEqual(len(str(s1_d)), len(m))
+        self.assertAlmostEqual(str(type(s1_d)), "<class 'dict'>")
