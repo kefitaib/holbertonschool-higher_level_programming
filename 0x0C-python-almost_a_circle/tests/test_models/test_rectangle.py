@@ -5,6 +5,7 @@ Module - test unit file
 
 
 import unittest
+from models.base import Base as b
 from models.rectangle import Rectangle as r
 
 
@@ -13,6 +14,8 @@ class TestBade(unittest.TestCase):
 
     def test_Init(self):
         """ test value  """
+
+        self.assertAlmostEqual(issubclass(r, b), True)
 
         r1 = r(6, 2)
         self.assertAlmostEqual(r1.x, 0)
@@ -110,3 +113,64 @@ class TestBade(unittest.TestCase):
         r3 = r(3, 6, 5, 0, 12)
         s = '     ###\n     ###\n     ###\n     ###\n     ###\n     ###\n'
         self.assertAlmostEqual(r3.display(), print(s))
+
+    def test_Str(self):
+        """ str """
+
+        r1 = r(4, 6, 2, 1, 12)
+        s = '[Rectangle] (12) 2/1 - 4/6'
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r2 = r(5, 5, 1)
+        s = '[Rectangle] (1) 1/0 - 5/5'
+        self.assertAlmostEqual(print(r2), print(s))
+
+    def test_Update(self):
+        """ update """
+
+        r1 = r(10, 10, 10, 10)
+        s = '[Rectangle] (1) 10/10 - 10/10'
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(89)
+        s = '[Rectangle] (89) 10/10 - 10/10'
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(89, 2)
+        s = '[Rectangle] (89) 10/10 - 2/10'
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(89, 2, 3)
+        s = "[Rectangle] (89) 10/10 - 2/3"
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(89, 2, 3, 4)
+        s = "[Rectangle] (89) 4/10 - 2/3"
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(89, 2, 3, 4, 5)
+        s = "[Rectangle] (89) 4/5 - 2/3"
+        self.assertAlmostEqual(print(r1), print(s))
+
+    def test_Update2(self):
+        """ update """
+
+        r1 = r(10, 10, 10, 10)
+        s = '[Rectangle] (1) 10/10 - 10/10'
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(height=1)
+        s = '[Rectangle] (1) 10/10 - 10/1'
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(width=1, x=2)
+        s = '[Rectangle] (1) 2/10 - 1/1'
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(y=1, width=2, x=3, id=89)
+        s = "[Rectangle] (89) 10/10 - 2/3"
+        self.assertAlmostEqual(print(r1), print(s))
+
+        r1.update(x=1, height=2, y=3, width=4)
+        s = "[Rectangle] (89) 1/3 - 4/2"
+        self.assertAlmostEqual(print(r1), print(s))
