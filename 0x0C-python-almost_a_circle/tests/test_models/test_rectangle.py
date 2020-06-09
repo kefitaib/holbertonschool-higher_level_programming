@@ -36,27 +36,53 @@ class TestBade(unittest.TestCase):
     def test_Type(self):
         """ Errors """
 
-        with self.assertRaises(TypeError):
-            ex = " must be an integer"
+        with self.assertRaises(TypeError) as e:
+            msg = "height must be an integer"
             r1 = r(10, 't')
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(TypeError) as e:
+            msg = "width must be an integer"
+            r1 = r(2.5, 't')
+
+        with self.assertRaises(TypeError) as e:
+            msg = "x must be an integer"
             r2 = r(10, 2, 't', 2)
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(TypeError) as e:
+            msg = "y must be an integer"
+            r1 = r(10, 2, 3, 'u')
+
+        with self.assertRaises(TypeError) as e:
+            msg = '__init__() takes from 3 to 6 positional\
+            arguments but 7 were given'
             r3 = r(10, 2, 6, 2, 7, 3)
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(TypeError) as e:
+            msg = "__init__() missing 1 required positional argument: 'height'"
             r4 = r(10)
+
+        self.assertAlmostEqual(msg, str(e.exception))
 
     def test_Value(self):
         """ Error """
 
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError) as e:
+            msg = 'width must be > 0'
             r1 = r(-12, 10)
 
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError) as e:
+            msg = 'height must be > 0'
+            r1 = r(12, -10)
+
+        with self.assertRaises(ValueError) as e:
+            msg = 'y must be >= 0'
             r1 = r(10, 2, 6, -2)
+
+        with self.assertRaises(ValueError) as e:
+            msg = 'x must be >= 0'
+            r1 = r(12, 10, -6, 3)
+
+        self.assertAlmostEqual(msg, str(e.exception))
 
     def test_Area(self):
         """ test area """
