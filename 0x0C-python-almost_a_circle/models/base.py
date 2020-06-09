@@ -6,6 +6,7 @@ Module - class
 
 import json
 import os.path as o
+import csv
 
 
 class Base():
@@ -80,3 +81,50 @@ class Base():
                         l.append(cls.create(**d))
 
         return l
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ save in file """
+
+        with open(cls.__name__ + ".csv", 'w') as f:
+            writer = csv.writer(f)
+            for o in list_objs:
+                s = []
+                s.append(o.id)
+                if cls.__name__ == "Rectangle":
+                    s.append(o.width)
+                    s.append(o.height)
+
+                else:
+                    s.append(o.size)
+
+                s.append(o.x)
+                s.append(o.y)
+                writer.writerow(s)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load from file """
+
+        with open(cls.__name__ + ".csv", newline='') as f:
+            reader = csv.reader(f)
+            res = []
+            for r in reader:
+                l = [int(x) for x in r]
+                i = 1
+                d = {'id': l[0]}
+                if cls.__name__ == "Rectangle":
+                    d['width'] = l[i]
+                    d['height'] = l[i + 1]
+                    i += 2
+
+                else:
+                    d['size'] = l[i]
+                    i += 1
+
+                d['x'] = l[i]
+                d['y'] = l[i + 1]
+
+                res.append(cls.create(**d))
+
+        return res
