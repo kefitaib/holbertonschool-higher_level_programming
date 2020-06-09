@@ -34,7 +34,7 @@ class Square(Rectangle):
                 if i == 0:
                     self.id = args[i]
                 if i == 1:
-                    self.__size = args[i]
+                    self.size = args[i]
                 if i == 2:
                     self.x = args[i]
                 if i == 3:
@@ -45,7 +45,7 @@ class Square(Rectangle):
                 if k == "id":
                     self.id = v
                 if k == "size":
-                    self.__size = v
+                    self.size = v
                 if k == "x":
                     self.x = v
                 if k == "y":
