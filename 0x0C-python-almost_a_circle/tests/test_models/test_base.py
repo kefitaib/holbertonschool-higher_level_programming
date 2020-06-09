@@ -6,6 +6,7 @@ Module - test unit file
 
 import unittest
 from models.base import Base as b
+from models.rectangle import Rectangle as r
 
 
 class TestBade(unittest.TestCase):
