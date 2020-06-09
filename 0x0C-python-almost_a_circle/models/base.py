@@ -7,6 +7,7 @@ Module - class
 import json
 import os.path as o
 import csv
+import turtle
 
 
 class Base():
@@ -128,3 +129,26 @@ class Base():
                 res.append(cls.create(**d))
 
         return res
+
+    def draw(list_rectangles, list_squares):
+        """ draw """
+
+        for x in list_rectangles:
+            turtle.forward(x.height)
+            turtle.left(90)
+            turtle.forward(x.width)
+            turtle.left(90)
+            turtle.forward(x.height)
+            turtle.left(90)
+            turtle.forward(x.width)
+            turtle.left(90)
+
+        for x in list_squares:
+            turtle.forward(x.height)
+            turtle.left(90)
+            turtle.forward(x.width)
+            turtle.left(90)
+            turtle.forward(x.height)
+            turtle.left(90)
+            turtle.forward(x.width)
+            turtle.left(90)
