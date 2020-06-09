@@ -89,3 +89,47 @@ class TestBade(unittest.TestCase):
         self.assertAlmostEqual(print(r2), print(s))
         self.assertFalse(r1 is r2)
         self.assertFalse(r1 == r2)
+
+    def last(self):
+        """ last """
+
+        r1 = r(10, 7, 2, 8)
+        r2 = r(2, 4)
+        list_rectangles_input = [r1, r2]
+
+        r.save_to_file(list_rectangles_input)
+
+        o = r.load_from_file()
+
+        m = '[Rectangle] (1) 2/8 - 10/7'
+        self.assertAlmostEqual(print(r1), print(m))
+
+        m = '[Rectangle] (2) 0/0 - 2/4'
+        self.assertAlmostEqual(print(r2), print(m))
+
+        m = '[Rectangle] (1) 2/8 - 10/7'
+        self.assertAlmostEqual(print(o[0]), print(m))
+
+        m = '[Rectangle] (2) 0/0 - 2/4'
+        self.assertAlmostEqual(print(o[1]), print(m))
+
+
+        s1 = s(5)
+        s2 = s(7, 9, 1)
+        list_squares_input = [s1, s2]
+
+        s.save_to_file(list_squares_input)
+
+        o = Square.load_from_file()
+
+        m = '[Square] (5) 0/0 - 5'
+        self.assertAlmostEqual(print(s1), print(m))
+
+        m = '[Square] (6) 9/1 - 7'
+        self.assertAlmostEqual(print(s2), print(m))
+
+        m = '[Square] (5) 0/0 - 5'
+        self.assertAlmostEqual(print(o[0]), print(m))
+
+        m = '[Square] (6) 9/1 - 7'
+        self.assertAlmostEqual(print(o[1]), print(m))
