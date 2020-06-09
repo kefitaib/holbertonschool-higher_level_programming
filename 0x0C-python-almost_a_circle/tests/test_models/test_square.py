@@ -177,3 +177,7 @@ class TestSquare(unittest.TestCase):
         m = "{'id': 1, 'x': 2, 'size': 10, 'y': 1} "
         self.assertAlmostEqual(len(str(s1_d)), len(m))
         self.assertAlmostEqual(str(type(s1_d)), "<class 'dict'>")
+        s2 = s(1, 1)
+        s2.update(**s1_d)
+        self.assertFalse(s1 == s2)
+        self.assertEqual(print(s1), print(s2))

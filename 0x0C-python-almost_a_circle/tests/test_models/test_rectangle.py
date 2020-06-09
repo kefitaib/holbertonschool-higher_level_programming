@@ -183,3 +183,7 @@ class TestBade(unittest.TestCase):
         s = "{'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10} "
         self.assertAlmostEqual(len(str(r1_d)), len(s))
         self.assertAlmostEqual(str(type(r1_d)), "<class 'dict'>")
+        r2 = r(1, 1)
+        r2.update(**r1_d)
+        self.assertFalse(r1 == r2)
+        self.assertAlmostEqual(print(r1), print(r2))
