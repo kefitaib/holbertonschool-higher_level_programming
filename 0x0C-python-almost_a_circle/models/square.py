@@ -11,8 +11,8 @@ class Square(Rectangle):
     """ class sqaure """
 
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(size, size, x, y, id)
         self.size = size
+        super().__init__(self.size, self.size, x, y, id)
 
     @property
     def size(self):
@@ -29,7 +29,7 @@ class Square(Rectangle):
 
     def __str__(self):
         return "[Square] (" + str(self.id) + ") " + str(self.x) +\
-            "/" + str(self.y) + " - " + str(self.__size)
+            "/" + str(self.y) + " - " + str(self.size)
 
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute """
