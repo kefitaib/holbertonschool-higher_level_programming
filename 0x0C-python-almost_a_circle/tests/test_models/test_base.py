@@ -113,7 +113,6 @@ class TestBade(unittest.TestCase):
         m = '[Rectangle] (2) 0/0 - 2/4'
         self.assertAlmostEqual(print(o[1]), print(m))
 
-
         s1 = s(5)
         s2 = s(7, 9, 1)
         list_squares_input = [s1, s2]
