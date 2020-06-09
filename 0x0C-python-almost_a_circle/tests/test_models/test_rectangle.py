@@ -16,17 +16,28 @@ class TestBade(unittest.TestCase):
 
         r1 = r(6, 2)
         self.assertAlmostEqual(r1.x, 0)
+        self.assertAlmostEqual(r1.y, 0)
+        self.assertAlmostEqual(r1.width, 6)
+        self.assertAlmostEqual(r1.height, 2)
 
         r2 = r(2, 3, 3, 2)
         self.assertAlmostEqual(r2.y, 2)
+        self.assertAlmostEqual(r2.x, 3)
+        self.assertAlmostEqual(r2.width, 2)
+        self.assertAlmostEqual(r2.height, 3)
 
         r3 = r(3, 6, 5, 0, 12)
         self.assertAlmostEqual(r3.id, 12)
+        self.assertAlmostEqual(r3.x, 5)
+        self.assertAlmostEqual(r3.y, 0)
+        self.assertAlmostEqual(r3.width, 3)
+        self.assertAlmostEqual(r3.height, 6)
 
     def test_Type(self):
         """ Errors """
 
         with self.assertRaises(TypeError):
+            ex = " must be an integer"
             r1 = r(10, 't')
 
         with self.assertRaises(TypeError):
