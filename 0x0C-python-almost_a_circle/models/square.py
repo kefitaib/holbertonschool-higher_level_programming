@@ -11,21 +11,21 @@ class Square(Rectangle):
     """ class sqaure """
 
     def __init__(self, size, x=0, y=0, id=None):
+        super().__init__(size, size, x, y, id)
         self.size = size
-        super().__init__(self.size, self.size, x, y, id)
 
     @property
     def size(self):
         return self.__size
 
     @size.setter
-    def size(self, val):
-        if not isinstance(val, int):
+    def size(self, size):
+        if not isinstance(size, int):
             raise TypeError("width must be an integer")
 
-        if val <= 0:
+        if size <= 0:
             raise ValueError("width must be > 0")
-        self.__size = val
+        self.__size = size
 
     def __str__(self):
         return "[Square] (" + str(self.id) + ") " + str(self.x) +\
