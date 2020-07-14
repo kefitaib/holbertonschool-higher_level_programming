@@ -2,7 +2,7 @@
 -- create database
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 
--- creates the table hbtn_0d_usa on your MySQL server
+-- creates the table states
 CREATE TABLE IF NOT EXISTS hbtn_0d_usa.states
-(id INT NOT NULL DEFAULT 1 UNIQUE PRIMARY KEY,
+(id INT PRIMARY KEY NOT NULL DEFAULT 1 AUTO_INCREMENT UNIQUE,
        name VARCHAR(256));
