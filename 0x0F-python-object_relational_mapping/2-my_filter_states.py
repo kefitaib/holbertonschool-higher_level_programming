@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" task 2 """
+
+
 if __name__ == "__main__":
     import sys
     import MySQLdb
