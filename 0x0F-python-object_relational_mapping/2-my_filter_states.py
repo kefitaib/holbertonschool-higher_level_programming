@@ -10,7 +10,7 @@ if __name__ == "__main__":
                           passwd=sys.argv[2], db=sys.argv[3])
 
     cur = con.cursor()
-    s = "SELECT * FROM states WHERE name = '{}'\
+    s = "SELECT * FROM states WHERE name LIKE BINARY '{}'\
     ORDER BY id ASC".format(sys.argv[4])
 
     cur.execute(s)
