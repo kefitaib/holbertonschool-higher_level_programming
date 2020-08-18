@@ -1,29 +1,22 @@
 #!/usr/bin/python3
-def findPeakUtil(arr, low, high, n):
-    """ that returns index of a peak element """
-
-    mid = low + (high - low)/2
-    mid = int(mid)
-
-    if ((mid == 0 or arr[mid - 1] <= arr[mid]) and
-        (mid == n - 1 or arr[mid + 1] <= arr[mid])):
-        return arr[mid]
-
-    elif (mid > 0 and arr[mid - 1] > arr[mid]):
-        return findPeakUtil(arr, low, (mid - 1), n)
-
-    else:
-        return findPeakUtil(arr, (mid + 1), high, n)
-
-def findPeak(arr, n):
-    """ function findPeakUtil() """
-
-    return findPeakUtil(arr, 0, n - 1, n)
-
 def find_peak(list_of_integers):
-    """ find the peak """
+    """ find peak"""
 
-    if len(list_of_integers) == 0:
+    if not list_of_integers:
         return None
 
-    return findPeak(list_of_integers, len(list_of_integers))
+    lo = 0
+    hi = len(list_of_integers) - 1
+
+    while lo <= hi:
+        if lo == hi:
+            return list_of_integers[lo]
+
+        mid = lo + (hi - lo) // 2
+        if list_of_integers[mid] < list_of_integers[mid + 1]:
+            lo = mid + 1
+
+        else:
+            hi = mid
+
+    return None
