@@ -12,14 +12,14 @@ if __name__ == "__main__":
     if len(argv) == 2:
         values['q'] = argv[1]
 
-        req = requests.post('http://0.0.0.0:5000/search_user', data=values)
-        try:
-            if not req.json():
-                print("No result")
+    req = requests.post('http://0.0.0.0:5000/search_user', data=values)
+    try:
+        if not req.json():
+            print("No result")
 
-            else:
-                print("[{}] {}".format(req.json().get('id'),
-                                       req.json().get('name')))
+        else:
+            print("[{}] {}".format(req.json().get('id'),
+                                   req.json().get('name')))
 
-        except:
-            print("Not a valid JSON")
+    except:
+        print("Not a valid JSON")
