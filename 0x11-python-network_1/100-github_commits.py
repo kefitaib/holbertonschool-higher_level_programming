@@ -12,11 +12,10 @@ if __name__ == "__main__":
                        .format(argv[2], argv[1])).json()
 
     i = 0
-    while i < 10:
-        if req[i]:
-            print("{}: {}".format(req[i].get("sha"), req[i].get("commit").
-                                  get("author").get("name")))
-        else:
+    for i, r in enumerate(req):
+        print("{}: {}".format(r.get("sha"), r.get("commit").
+                              get("author").get("name")))
+        if i == 9:
             break
 
         i += 1
