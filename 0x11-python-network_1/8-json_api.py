@@ -4,7 +4,6 @@
 
 import requests
 from sys import argv
-from requests.exceptions import HTTPError
 
 
 if __name__ == "__main__":
