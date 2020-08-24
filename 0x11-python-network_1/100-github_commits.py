@@ -8,7 +8,7 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    req = get("https://api.github.com/repos/{}/{}/commits"
+    req = requests.get("https://api.github.com/repos/{}/{}/commits"
               .format(argv[2], argv[1])).json()
 
     i = 0
