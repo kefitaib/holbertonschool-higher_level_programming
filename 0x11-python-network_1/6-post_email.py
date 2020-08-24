@@ -10,5 +10,5 @@ if __name__ == "__main__":
 
     values = {'email': argv[2]}
 
-    req = requests.get(argv[1], param=values)
+    req = requests.get(argv[1], params=values)
     print(req.text)
