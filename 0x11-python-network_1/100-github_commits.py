@@ -12,7 +12,10 @@ if __name__ == "__main__":
                        .format(argv[2], argv[1])).json()
 
     i = 0
-    while i < 10:
-        print("{}: {}".format(req[i]['sha'],
-                              req[i]['commit']['author']['name']))
+    try:
+        while i < 10:
+            print("{}: {}".format(req[i]['sha'],
+                                  req[i]['commit']['author']['name']))
         i += 1
+    except:
+        pass
