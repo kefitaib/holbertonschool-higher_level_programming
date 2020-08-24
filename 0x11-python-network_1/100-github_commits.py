@@ -13,5 +13,5 @@ if __name__ == "__main__":
 
     i = 0
     while i < 10:
-        print("{}: {}".format(res[i]['sha'], res[i]['committer'][0]))
+        print("{}: {}".format(req[i]['sha'], req[i]['committer'][0]))
         i += 1
