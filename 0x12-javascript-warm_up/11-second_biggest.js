@@ -1,6 +1,6 @@
 #!/usr/bin/node
 if (process.argv.length === 3 || process.argv.length === 2) {
-  console.log(1);
+  console.log(0);
 } else {
   let big;
   let big2;
