@@ -6,7 +6,7 @@ module.exports = class Square extends Rectangle {
   }
 
   print (c) {
-    if (isNaN(c)) {
+    if (typeof c === 'undefined') {
       c = 'X';
     }
     for (let i = 0; i < this.height; i++) {
