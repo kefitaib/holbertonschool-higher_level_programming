@@ -8,7 +8,7 @@ request(process.argv[2], function (err, response, body) {
   const res = JSON.parse(body).results;
   for (const j of res) {
     for (const k of j.characters) {
-      if (k.endsWith('/18/')) {
+      if (k.includes('/18')) {
         x++;
       }
     }
