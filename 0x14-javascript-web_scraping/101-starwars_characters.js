@@ -16,7 +16,7 @@ request(url, function (err, response, body) {
       l[i] = JSON.parse(body1).name;
       x++;
       if (x === b.characters.length) {
-        Object.values(l).forEach(val => { console.log(val); });
+        for (const j of b.characters) { console.log(l[j]); }
       }
     });
   }
